@@ -73,23 +73,21 @@ export default {
           // 上传前图片处理
           onBeforeUpload: function () {},
           // 图片上传处理
-          onUpload: function () {
-            console.log(...arguments);
-          },
+          onUpload: function () {},
           // 插入到编辑器前处理
           onBeforeInset: function () {},
         };
       },
     });
-    console.log("replace config after instance", this.editorInstance);
+    // console.log("replace config after instance", this.editorInstance);
 
     ckeditor = window.CKEDITOR.instances;
-    console.log("window CKEDITOR instances", ckeditor);
+    // console.log("window CKEDITOR instances", ckeditor);
 
     Object.keys(ckeditor).forEach((itemInCK) => {
       ckeditor[itemInCK].on("blur", (value) => {
-        console.log("CKEditor onblur", value);
-        this.$emit("input", ckeditor[this.editorKey].getData());
+        // console.log("CKEditor onblur", value);
+        this.$emit("input", ckeditor[this.editorKey].getData(), value);
       });
     });
 
