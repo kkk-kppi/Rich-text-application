@@ -19,27 +19,27 @@ CKEDITOR.editorConfig = function (config) {
   // config.editorplaceholder = 'Type your comment…'; // ''set empty string, it will disable the placeholder
 
   // toolbar config
-  config.toolbarGroups = [
-    { name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
-    { name: 'clipboard', groups: [ 'undo', 'clipboard' ] },
-    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
-    { name: 'forms', groups: [ 'forms' ] },
-    { name: 'tools', groups: [ 'tools' ] },
-    '/',
-    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
-    { name: 'colors', groups: [ 'colors' ] },
-    { name: 'paragraph', groups: [ 'align', 'list', 'indent', 'blocks', 'bidi', 'paragraph' ] },
-    '/',
-    { name: 'styles', groups: [ 'styles' ] },
-    { name: 'others', groups: [ 'others' ] },
-    '/',
-    { name: 'links', groups: [ 'links' ] },
-    { name: 'insert', groups: [ 'insert' ] },
-    { name: 'about', groups: [ 'about' ] }
-  ];
+	config.toolbarGroups = [
+		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+		{ name: 'tools', groups: [ 'tools' ] },
+		{ name: 'about', groups: [ 'about' ] },
+		'/',
+		{ name: 'forms', groups: [ 'forms' ] },
+		{ name: 'insert', groups: [ 'insert' ] },
+		{ name: 'links', groups: [ 'links' ] },
+		'/',
+		{ name: 'colors', groups: [ 'colors' ] },
+		{ name: 'basicstyles', groups: [ 'cleanup', 'basicstyles' ] },
+		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+		'/',
+		{ name: 'styles', groups: [ 'styles' ] },
+		{ name: 'others', groups: [ 'others' ] }
+	];
   // remove buttons
-  config.removeButtons = 'Print,ExportPdf,Templates,Form,Checkbox,Radio,TextField,Textarea,Select,Button,ImageButton,HiddenField,Language,CreateDiv,Table,PageBreak,HorizontalRule,Iframe,ShowBlocks'
+  config.removeButtons = 'Language,ShowBlocks';
 
-  // 启用插件
+  // 启用额外插件
   config.extraPlugins = 'uploads'
 }
